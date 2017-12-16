@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'MullerBold';
+  src: url("../fonts/MullerBold/MullerBold.eot") format("eot");
+  src: url("../fonts/MullerBold/MullerBold.woff") format("woff2");
+  src: url("../fonts/MullerBold/MullerBold.ttf") format("truetype");
+  src: url("../fonts/MullerBold/MullerBold.svg#arialbold") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'CirceRegular';
+  src: url("../fonts/CirceRegular/CirceRegular.eot") format("eot");
+  src: url("../fonts/CirceRegular/CirceRegular.woff") format("woff2");
+  src: url("../fonts/CirceRegular/CirceRegular.ttf") format("truetype");
+  src: url("../fonts/CirceRegular/CirceRegular.svg#arialbold") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'CirceBold';
+  src: url("../fonts/CirceBold/CirceBold.eot") format("eot");
+  src: url("../fonts/CirceBold/CirceBold.woff") format("woff2");
+  src: url("../fonts/CirceBold/CirceBold.ttf") format("truetype");
+  src: url("../fonts/CirceBold/CirceBold.svg#arialbold") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  font-family: "CirceRegular", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.nav__wrapper {
+  background-color: #ffffff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1190px;
+  margin: 0 auto;
+
+}
+.logo {
+  width: 75px;
+  padding: 15px;
+}
+.logo img {
+  width: 100%;
+}
+.menu__items {
+  list-style: none; 
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.menu__items a {
+  display: block;
+  padding: 49px 20px;
+  text-decoration: none;
+  color: #000000;
+}
+.menu__items a:hover {
+  text-decoration: underline;
+
+}
+.title {
+  max-width: 1190px;
+  color: #ffffff;
+  text-align: center;
+  margin: 69px auto 55px;
+}
+.title h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.title-bigger {
+  font-size: 36px;
+}
+.choice__wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+.choice {
+  max-width: 1190px;
+  margin: 0 auto;
+  display: flex;
+}
+choice__date {
+  width: 185px;
+  background-color: #ffffff;
+}
+.choice__date input {
+
+}
+.choice__quantity {
+  width: 370px;
+}
+.choice__button {
+  width: 181px;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #00d38c;
+  border-radius: 5px;
+}
