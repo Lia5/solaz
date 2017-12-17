@@ -91,19 +91,44 @@ nav {
 }
 .choice {
   max-width: 1190px;
-  margin: 0 auto;
   display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 choice__date {
+  display: flex;
   width: 185px;
   background-color: #ffffff;
+  border-radius: 5px;
 }
+.ficon-check {
+  display: table-cell;
+  width: 35px;
+  padding: 13px;
+}
+.ficon-check img {
+  width: 100%;
+}
+.container-cell {
+    display: table-cell;
+}
+.container-cell span {
+  display: block;
+  color: #989898;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
 .choice__date input {
 
 }
 .choice__quantity {
   width: 370px;
+  margin-left: 29px;
+  margin-right: 29px;
+  border-radius: 5px;
 }
+
 .choice__button {
   width: 181px;
   font-size: 11px;
@@ -113,4 +138,7 @@ choice__date {
   color: #ffffff;
   background-color: #00d38c;
   border-radius: 5px;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+  background: #ededed;
 }

@@ -7,8 +7,6 @@
     <title>Solaz</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    
     <!--<link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/fontello-embedded.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -51,12 +49,20 @@
     </div>
     <div class="choice__wrapper">
       <div class="choice">
-        <div class="choice__date choice__date--from">
-          <input id="datepicker" type="text" >
-          <p><script>document.write(day1);</script></p>
+        <div class="choice__date choice__date--in">
+          <div class="ficon-check"><img src="img/ficon-check-in.png" alt=""></div>
+          <div class="container-cell">
+            <input id="datepicker-from" class="datepicker-both" type="text" >
+            <span id="checkInWeekday"></span>
+          </div>
+          
         </div>
-        <div class="choice__date choice__date--by">
-          <input id="datepicker2" type="text" >
+        <div class="choice__date choice__date--out">
+          <div class="ficon-check"><img src="img/ficon-check-out.png" alt=""></div>
+          <div class="container-cell">
+            <input id="datepicker-to" class="datepicker-both" type="text" >
+            <span id="checkOutWeekday"></span>
+          </div>
         </div>
         <div class="choice__quantity"></div>
         <div class="choice__button">Найти номера<br> по лучшей цене</div>
@@ -79,7 +85,8 @@
   <script src="js/maskedinput.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>-->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/datepicker-ru.js"></script>
   <script src="js/script.js"></script>
   
 </body>
