@@ -1,6 +1,7 @@
 /*datepicker*/
 $( function() {
   $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+  
   $( ".datepicker-both" ).datepicker({
     
     dateFormat: "d M yy",
@@ -9,15 +10,20 @@ $( function() {
   });
 // Getter
 var dateFormat = $( ".datepicker-both" ).datepicker( "option", "dateFormat" );
+var altField = $( ".datepicker-both" ).datepicker( "option", "altField" );
+var altFormat = $( ".datepicker-both" ).datepicker( "option", "altFormat" );
 // Setter
 $( ".datepicker-both" ).datepicker( "option", "dateFormat", "d M yy" );
+$( "#datepicker-from" ).datepicker( "option", "altField", "#checkInWeekday" );
+$( "#datepicker-to" ).datepicker( "option", "altField", "#checkOutWeekday" );
+$( ".datepicker-both" ).datepicker( "option", "altFormat", "DD" );
 
   var /*dateFormat = "mm-dd-yy",*/
   from = $( "#datepicker-from" )
     .datepicker({
       defaultDate: "+1w",
       changeMonth: true,
-            altFormat: "DD"
+
     })
     .on( "change", function() {
       to.datepicker( "option", "minDate", getDate( this ) );
@@ -31,6 +37,8 @@ $( ".datepicker-both" ).datepicker( "option", "dateFormat", "d M yy" );
     from.datepicker( "option", "maxDate", getDate( this ) );
   });
 
+
+
 function getDate( element ) {
   var date;
   try {
@@ -41,50 +49,11 @@ function getDate( element ) {
 
   return date;
 }
- $( "#datepicker-from" ).datepicker(
-  $.extend({
-    altField: '#checkInWeekday'
-}, from)
-  );
-    /*
-      var from = $( "#from" )
-      .datepicker({
-        dateFormat: "d M yy D",
-        minDate: new Date($('#hiddendelivdate').val()),
-        monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        monthNamesShort : ['Янв','Фев','Мрт','Апр','Май','Июн','Июл','Авг','Сент','Окт','Нояб','Дек'],
-        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-        dayNamesShort: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
-        minDate:-4,
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 2
-      })
-      .on( "change", function() {
-       to.datepicker( "option", "minDate", getDate( this ) );
-      }),
-      to = $( "#to" ).datepicker({
-
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 2
-      })
-      .on( "change", function() {
-        from.datepicker( "option", "maxDate", getDate( this ) );
-      });
-
-
-  function getDate( element ) {
-    var date;
-    try {
-      date = $.datepicker.parseDate( element.value );
-    } catch( error ) {
-      date = null;
-    }
-
-    return date;
-  }
-   */
+$( "#datepicker-from" ).datepicker({
+  altField: "#checkInWeekday",
+  altFormat: "DD"
+});
+   
 
 }
 

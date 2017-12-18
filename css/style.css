@@ -139,6 +139,16 @@ choice__date {
   background-color: #00d38c;
   border-radius: 5px;
 }
+.ui-datepicker-multi .ui-datepicker-group table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
-  background: #ededed;
+  background: #007fff;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none;
+
 }
