@@ -95,7 +95,7 @@ nav {
   margin: 0 auto;
   justify-content: center;
 }
-choice__date {
+.choice__date {
   display: flex;
   width: 185px;
   background-color: #ffffff;
@@ -111,6 +111,7 @@ choice__date {
 }
 .container-cell {
     display: table-cell;
+    width: 136px;
 }
 .container-cell span {
   display: block;
@@ -119,8 +120,13 @@ choice__date {
   background-color: #ffffff;
 }
 
-.choice__date input {
-
+.container-cell input {
+  border: none;
+  width: 120px;
+  padding: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 .choice__quantity {
   width: 370px;
