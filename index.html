@@ -64,7 +64,54 @@
             <input type="text" id="checkOutWeekday">
           </div>
         </div>
-        <div class="choice__quantity"></div>
+        <div class="choice__quantity">
+          <div class="choice__quantity__container-cell">
+            <p>
+              <span>
+                <text id="adultText">1 взрослый</text> ", "
+                <text id="childrenText">0 детей</text>", "
+                <text class="clear" id="roomText">1 номер</text>
+              </span>
+            </p>
+            
+          </div>
+
+        <!-- Button trigger modal -->
+        
+              
+        <!-- Modal -->
+          <div class="modal" id="modal__choice__quantity">
+            <div class="modal__content">
+              <div class="modal-body">
+                <form id='myform' method='POST' action='#' class="numbo">
+                  <ul class="occupancy__selected">
+                    <li class="occupancy__box-container">
+                      <span class="occupancy__label">Номеров</span>
+                      <input type='button' value='-' class='qtyminus' field='quantity' style="font-weight: bold;" />
+                      <input type='text' name='quantity' value='1' class='qty' size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                      <input type='button' value='+' class='qtyplus' field='quantity' style="font-weight: bold;" />
+                    </li>
+                    <li class="occupancy__box-container">
+                        <span class="occupancy__label">Взрослых</span>
+                        <input type='button' value='-' class='qtyminus' field='quantity-v' style="font-weight: bold;" />
+                        <input type='text' name='quantity-v' value='1' class='qty' size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                        <input type='button' value='+' class='qtyplus' field='quantity-v' style="font-weight: bold;" />
+                    </li>
+                    <li class="occupancy__box-container">
+                        <span class="occupancy__label">Детей</span>
+                        <input type='button' value='-' class='qtyminus' field='quantity-d' style="font-weight: bold;" />
+                        <input type='text' name='quantity-d' value='1' class='qty' size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                        <input type='button' value='+' class='qtyplus' field='quantity-d' style="font-weight: bold;" />
+                    </li>
+                    <li class="occupancy__box-container"></li>
+                  </ul>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="choice__button">Найти номера<br> по лучшей цене</div>
       </div>
     </div>
