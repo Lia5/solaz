@@ -3,7 +3,6 @@ $( function() {
   $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
   
   $( ".datepicker-both" ).datepicker({
-    
     dateFormat: "d M yy",
     numberOfMonths: 2,
     minDate:-4,
@@ -18,8 +17,7 @@ $( "#datepicker-from" ).datepicker( "option", "altField", "#checkInWeekday" );
 $( "#datepicker-to" ).datepicker( "option", "altField", "#checkOutWeekday" );
 $( ".datepicker-both" ).datepicker( "option", "altFormat", "DD" );
 
-  var /*dateFormat = "mm-dd-yy",*/
-  from = $( "#datepicker-from" )
+  var from = $( "#datepicker-from" )
     .datepicker({
       defaultDate: "+1w",
       changeMonth: true,
@@ -105,6 +103,7 @@ $(".qtyminus").click(function(e) {
   } else {
       // Otherwise put a 0 there
       $('input[name='+fieldName+']').val(1);
+      $('input[name=quantity-d]').val(0);
       $('.qtyminus').val("-").css('color','#aaa');
       $('.qtyminus').val("-").css('cursor','not-allowed');
   }

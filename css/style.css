@@ -135,16 +135,6 @@ nav {
   border-radius: 5px;
 }
 
-.choice__button {
-  width: 181px;
-  font-size: 11px;
-  padding: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #00d38c;
-  border-radius: 5px;
-}
 .ui-datepicker-multi .ui-datepicker-group table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -169,9 +159,9 @@ nav {
   margin: 0;
 }
 .choice__quantity__container-cell {
-  display: table-cell;
-  padding: 18px;
-  width: 100%;
+  display: flex;
+  padding: 13px;
+  width: 93%;
 }
 .modal{
   position: absolute;
@@ -208,4 +198,27 @@ nav {
   font-size: 30px;
   background-color: transparent;
   border: none;
+}
+.qty-input-value {
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  border: none;
+}
+
+
+
+
+
+
+.choice__button {
+  width: 181px;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+  font-family: "CirceBold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #00d38c;
+  border-radius: 5px;
 }
