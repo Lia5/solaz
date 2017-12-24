@@ -61,7 +61,7 @@ $( "#datepicker-from" ).datepicker({
 
 jQuery(document).ready(function(){
   // This button will increment the value
-  $('.qtyplus').click(function(e){
+  $('.occupancy__box-container-n .qtyplus').click(function(e){
       // Stop acting like a button
       e.preventDefault();
       // Get the field name
@@ -74,21 +74,22 @@ jQuery(document).ready(function(){
           if (currentVal < 20)
           {
             $('input[name='+fieldName+']').val(currentVal + 1);
-            $('.qtyminus').val("-").removeAttr('style');
+            $('.occupancy__box-container-n .qtyminus').val("-").removeAttr('style');
           }
           else
           {
-            $('.qtyplus').val("+").css('color','#aaa');
-            $('.qtyplus').val("+").css('cursor','not-allowed');
+            $('.occupancy__box-container-n .qtyplus').val("+").css('color','#aaa');
+            $('.occupancy__box-container-n .qtyplus').val("+").css('cursor','not-allowed');
           }
       } else {
           // Otherwise put a 0 there
           $('input[name='+fieldName+']').val(1);
 
       }
+
   });
 // This button will decrement the value till 0
-$(".qtyminus").click(function(e) {
+$(".occupancy__box-container-n .qtyminus").click(function(e) {
   // Stop acting like a button
   e.preventDefault();
   // Get the field name
@@ -99,16 +100,100 @@ $(".qtyminus").click(function(e) {
   if (!isNaN(currentVal) && currentVal > 1) {
       // Decrement one only if value is > 1
       $('input[name='+fieldName+']').val(currentVal - 1);
-       $('.qtyplus').val("+").removeAttr('style');
+       $('.occupancy__box-container-n .qtyplus').val("+").removeAttr('style');
   } else {
       // Otherwise put a 0 there
       $('input[name='+fieldName+']').val(1);
       $('input[name=quantity-d]').val(0);
-      $('.qtyminus').val("-").css('color','#aaa');
-      $('.qtyminus').val("-").css('cursor','not-allowed');
+      $('.occupancy__box-container-n .qtyminus').val("-").css('color','#aaa');
+      $('.occupancy__box-container-n .qtyminus').val("-").css('cursor','not-allowed');
   }
+
+
 });
 });
 
 
+
+jQuery(document).ready(function(){
+  // This button will increment the value
+  $('.occupancy__box-container-v .qtyplus').click(function(e){
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+
+      fieldName = $(this).attr('field');
+      // Get its current value
+      var currentValV = parseInt($('input[name='+fieldName+']').val());
+      // If is not undefined
+      if (!isNaN(currentValV)) {
+          // Increment only if value is < 20
+          if (currentValV < 20)
+          {
+            $('input[name='+fieldName+']').val(currentValV + 1);
+            $('.occupancy__box-container-v .qtyminus').val("-").removeAttr('style');
+          }
+          else
+          {
+            $('.occupancy__box-container-v .qtyplus').val("+").css('color','#aaa');
+            $('.occupancy__box-container-v .qtyplus').val("+").css('cursor','not-allowed');
+          }
+      } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(1);
+
+      }
+
+
+
+
+  });
+// This button will decrement the value till 0
+$(".occupancy__box-container-v .qtyminus").click(function(e) {
+  // Stop acting like a button
+  e.preventDefault();
+ 
+  // Get the field name
+  fieldName = $(this).attr('field');
+  // Get its current value
+  var currentValV = parseInt($('input[name='+fieldName+']').val());
+  // If it isn't undefined or its greater than 0
+  if (!isNaN(currentValV) && currentValV > 1) {
+      // Decrement one only if value is > 1
+      $('input[name='+fieldName+']').val(currentValV - 1);
+       $('.occupancy__box-container-v .qtyplus').val("+").removeAttr('style');
+  } else {
+      // Otherwise put a 0 there
+      $('input[name='+fieldName+']').val(1);
+      $('.occupancy__box-container-v .qtyminus').val("-").css('color','#aaa');
+      $('.occupancy__box-container-v .qtyminus').val("-").css('cursor','not-allowed');
+  }
+
+});
+});
     
+/*
+
+
+else {
+  $('input[name=quantity]').val(1); 
+  $('.occupancy__box-container .qtyminus').val("-").css('color','#aaa');
+  $('.occupancy__box-container .qtyminus').val("-").css('cursor','not-allowed');
+}
+
+
+if (parseInt($('input[name=quantity]').val())) {
+ 
+} else 
+
+if (parseInt($('input[name=quantity-v]').val())) {
+ $('input[name=quantity-v]').val(1); 
+ $('.occupancy__box-container-v .qtyminus').val("-").css('color','#aaa');
+ $('.occupancy__box-container-v .qtyminus').val("-").css('cursor','not-allowed');
+} else 
+
+if (parseInt($('input[name=quantity-d]').val())) {
+$('input[name=quantity-d]').val(0); 
+$('.occupancy__box-container-d .qtyminus').val("-").css('color','#aaa');
+$('.occupancy__box-container-d .qtyminus').val("-").css('cursor','not-allowed');
+}*/

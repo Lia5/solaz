@@ -86,19 +86,19 @@
               <div class="modal-body">
                 <form id='myform' method='POST' action='#' class="numbo">
                   <ul class="occupancy__selected">
-                    <li class="occupancy__box-container">
+                    <li class="occupancy__box-container occupancy__box-container-n">
                       <span class="occupancy__label">Номеров</span>
                       <input type='button' value='-' class='qtyminus' field='quantity' style="font-weight: bold;" />
                       <input type='text' name='quantity' value='1' class='qty' size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
                       <input type='button' value='+' class='qtyplus' field='quantity' style="font-weight: bold;" />
                     </li>
-                    <li class="occupancy__box-container">
+                    <li class="occupancy__box-container occupancy__box-container-v">
                         <span class="occupancy__label">Взрослых</span>
                         <input type='button' value='-' class='qtyminus' field='quantity-v' style="font-weight: bold;" />
                         <input type='text' name='quantity-v' value='1' class='qty' size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
                         <input type='button' value='+' class='qtyplus' field='quantity-v' style="font-weight: bold;" />
                     </li>
-                    <li class="occupancy__box-container">
+                    <li class="occupancy__box-container occupancy__box-container-d">
                         <span class="occupancy__label">Детей</span>
                         <input type='button' value='-' class='qtyminus' field='quantity-d' style="font-weight: bold;" />
                         <input type='text' name='quantity-d' value='0' class='qty' size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
